@@ -8,18 +8,16 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-#define HRML(k1,k2,k3,k4) &ht LGUI k1 &ht LALT k2 &ht LSHIFT k3 &ht LCTRL k4
-#define HRMR(k1,k2,k3,k4) &ht LCTRL k1 &ht LSHIFT k2 &ht LALT k3 &ht LGUI k4
+#define HRML(k1,k2,k3,k4) &hm LGUI k1 &hm LALT k2 &hm LSHIFT k3 &hm LCTRL k4
+#define HRMR(k1,k2,k3,k4) &hm LCTRL k1 &hm LSHIFT k2 &hm LALT k3 &hm LGUI k4
 
 / {
     behaviours {
-        ht: hold_tap {
-            label = "hold_tap";
-            compatible = "zmk, behaviour-hold-tap";
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
             flavor = "tap-preferred";
-            tapping-term-ms = <220>;
-            quick-tap-ms = <150>;
-            global-quick-tap;
             bindings = <&kp>, <&kp>;
         };
     };
