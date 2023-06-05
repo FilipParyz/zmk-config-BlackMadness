@@ -17,8 +17,8 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <220>;
-            quick-tap-ms = <50>;
+            tapping-term-ms = <180>;
+            quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -48,7 +48,7 @@
             &none &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &kp NUMBER_0 &none
             &none &kp PG_UP &kp HOME &kp UP &kp END &trans &trans &trans &trans &trans &trans &none
             &none &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &trans &trans &trans &trans &trans &trans &none
-            &trans &trans &trans &trans &trans &trans 
+            &kp ENTER &trans &trans &trans &trans &trans
             >;
         };
         raise_layer {
@@ -56,7 +56,7 @@
             &none &kp EXCLAMATION &kp AT_SIGN &kp HASH &kp DOLLAR &kp PERCENT &kp CARET &kp AMPERSAND &kp ASTERISK &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &none
             &none &trans &trans &trans &trans &kp DOUBLE_QUOTES &kp MINUS &kp EQUAL &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp BACKSLASH &none
             &none &trans &trans &trans &trans &kp SINGLE_QUOTE &kp UNDERSCORE &kp PLUS &kp LEFT_BRACE &kp RIGHT_BRACE &kp PIPE &none
-            &trans &trans &trans &trans &trans &trans 
+            &kp ENTER &trans &trans &trans &trans &trans 
             >;
         };
         bt_layer {
