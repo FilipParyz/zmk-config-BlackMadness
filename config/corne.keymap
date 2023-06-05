@@ -9,7 +9,7 @@
 #include <behaviors.dtsi>
 
 #define HRML(k1,k2,k3,k4) &hm LEFT_GUI k1 &hm LEFT_ALT k2 &hm LEFT_SHIFT k3 &hm LEFT_CTRL k4
-#define HRMR(k1,k2,k3,k4) &hm RIGTH_CTRL k1 &hm RIGHT_SHIFT k2 &hm RIGTH_ALT k3 &hm RIGTH_GUI k4
+#define HRMR(k1,k2,k3,k4) &hm RIGHT_CTRL k1 &hm RIGHT_SHIFT k2 &hm RIGHT_ALT k3 &hm RIGHT_GUI k4
 
 / {
     behaviours {
@@ -38,7 +38,7 @@
         default_layer {
             bindings = <
             &none &kp Q &kp W &kp E &kp R &kp T &kp Y &kp U &kp I &kp O &kp P &none
-            &none HRML(A,B,C,D) &kp G &kp H HRML(J,K,L,SEMI) &none
+            &none HRML(A,B,C,D) &kp G &kp H HRMR(J,K,L,SEMI) &none
             &none &kp Z &kp X &kp C &kp V &kp B &kp N &kp M &kp COMMA &kp PERIOD &kp SLASH &none
             &kp ESCAPE &mo 1 &kp SPACE &kp BACKSPACE &mo 2 &kp RIGHT_ALT 
             >;
