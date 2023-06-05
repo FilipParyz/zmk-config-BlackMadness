@@ -9,7 +9,7 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define HRML(k1,k2,k3,k4) &ht LGUI k1 &ht LALT k2 &ht LSHIFT k3 &ht LCTRL k4
-#define HRMR(k1,k2,k3,k4) &ht LCTRL k1 &ht :SHIFT k2 &ht LALT k3 &ht LGUI k4
+#define HRMR(k1,k2,k3,k4) &ht LCTRL k1 &ht LSHIFT k2 &ht LALT k3 &ht LGUI k4
 
 / {
     behaviours {
