@@ -12,6 +12,18 @@
 #define HRML(k1,k2,k3,k4) &ht CTRL k1 &ht SHIFT k2 &ht LEFT_ALT k3 &ht GUI k4
 
 / {
+    behaviours {
+        ht: hold_tap {
+            label = "hold_tap";
+            compatible = "zmk, behaviour-hold-tap";
+            flavor = "tap-preferred";
+            tapping-term-ms = <220>;
+            quick-tap-ms = <150>;
+            global-quick-tap;
+            bindings = <&kp>, <&kp>;
+        };
+    };
+
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
@@ -19,6 +31,7 @@
             then-layer = <3>;
         };
     };
+
     keymap {
         compatible = "zmk,keymap";
 
