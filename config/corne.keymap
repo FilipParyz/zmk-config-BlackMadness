@@ -46,7 +46,7 @@
         lower_layer {
             bindings = <
             &none &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &kp NUMBER_0 &none
-            &none &kp TAB  &kp HOME &kp UP &kp END &kp PG_UP &none &none &none &none &none &none
+            &none &kp TAB  &kp HOME &kp UP &kp END &kp PG_UP &trans &trans &trans &trans &none
             &none &kp CAPS &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN &none &none &none &none &none &none
             &kp ENTER &trans &trans &trans &lt 2 DEL &kp ENTER
             >;
@@ -54,15 +54,15 @@
         raise_layer {
             bindings = <
             &none &kp EXCLAMATION &kp AT_SIGN &kp HASH &kp DOLLAR &kp PERCENT &kp CARET &kp AMPERSAND &kp ASTERISK &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &none
-            &none &none &none &none &none &kp DOUBLE_QUOTES &kp MINUS &kp EQUAL &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp BACKSLASH &none
+            &none &trans &trans &trans &trans &kp DOUBLE_QUOTES &kp MINUS &kp EQUAL &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp BACKSLASH &none
             &none &none &none &none &none &kp SINGLE_QUOTE &kp UNDERSCORE &kp PLUS &kp LEFT_BRACE &kp RIGHT_BRACE &kp PIPE &none
             &kp ENTER &trans &trans &trans &trans &kp ENTER
             >;
         };
         bt_layer {
             bindings = <
-                &none &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_SEL 5 &none &none &none &none &none &none
-                &none &bt BT_CLR &bt BT_PRV &bt BT_NXT &none &none &none &none &none &none &none &none
+                &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none &none &none &none &none &none
+                &none &bt BT_PRV &bt BT_NXT &none &bt BT_CLR &none &none &none &none &none &none
                 &none &none &none &none &none &none &none &none &none &none &none &none
                 &none &none &none &none &none &none 
             >;
