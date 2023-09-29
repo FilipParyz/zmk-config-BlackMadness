@@ -17,7 +17,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <180>;
+            tapping-term-ms = <160>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -54,8 +54,8 @@
         raise_layer {
             bindings = <
             &none &kp EXCLAMATION &kp AT_SIGN &kp HASH &kp DOLLAR &kp PERCENT &kp CARET &kp AMPERSAND &kp ASTERISK &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &none
-            &none &trans &trans &trans &trans &kp DOUBLE_QUOTES &kp MINUS &kp EQUAL &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp BACKSLASH &none
-            &none &none &none &none &none &kp SINGLE_QUOTE &kp UNDERSCORE &kp PLUS &kp LEFT_BRACE &kp RIGHT_BRACE &kp PIPE &none
+            &none &kp C_VOL_UP &kp C_BRI_UP &none &kp GRAVE &kp DOUBLE_QUOTES &kp MINUS &kp EQUAL &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp BACKSLASH &none
+            &none &kp C_VOL_DN &kp C_BRI_DN &none &none &kp SINGLE_QUOTE &kp UNDERSCORE &kp PLUS &kp LEFT_BRACE &kp RIGHT_BRACE &kp PIPE &none
             &kp ENTER &trans &trans &trans &trans &kp ENTER
             >;
         };
