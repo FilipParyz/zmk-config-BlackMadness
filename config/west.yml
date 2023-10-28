@@ -1,9 +1,9 @@
 manifest:
   remotes:
-    - name: ftc
+    - name: zmkfirmware
       url-base: https://github.com/ftc          # <--- ADD REPO
   projects:
-    - name: ftc
+    - name: zmk
       remote: zmkfirmware
       revision: mouse-ftc                       # <--- ADD REVISION
       import: app/west.yml
