@@ -60,7 +60,7 @@
         mouse_layer {
             bindings = <
             &none &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &kp NUMBER_0 &none
-            &none &trans &trans &trans &trans &&tog 3 U_WH_U U_BTN1 U_MS_U U_BTN2 &none &none
+            &none &trans &trans &trans &trans &tog 3  U_WH_U U_BTN1 U_MS_U U_BTN2 &none &none
             &none &trans &trans &trans &trans &trans  U_WH_D U_MS_L U_MS_D U_MS_R &none &none
             &kp ENTER &trans &trans U_BTN1 U_BTN2 &kp ENTER
             >;
