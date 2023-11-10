@@ -9,9 +9,6 @@
 #include <behaviors.dtsi>
 #include "mouse.dtsi"
 
-#define HRML(k1,k2,k3,k4) (&hm LGUI k1 &hm LALT k2 &hm LSHIFT k3 &hm LCTRL k4)
-#define HRMR(k1,k2,k3,k4) (&hm RCTRL k1 &hm RSHIFT k2 &hm RALT k3 &hm RGUI k4)
-
 / {
     behaviours {
         hm: homerow_mods {
@@ -29,7 +26,7 @@
         compatible = "zmk,conditional-layers";
         tri_layer {
             if-layers = <1 2>;
-            then-layer = <3>;
+            then-layer = <4>;
         };
     };
 
@@ -44,15 +41,15 @@
             &kp ESCAPE &lt 1 SPACE &kp SPACE &kp BACKSPACE &lt 2 BACKSPACE &kp RALT
             >;
         };
-        lower_layer {
+        arrows_layer {
             bindings = <
             &none &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &kp NUMBER_0 &none
-            &none &kp TAB  &kp HOME &kp UP   &kp END   &kp PG_UP U_WH_U U_BTN1 U_MS_U U_BTN2 &none &none
-            &none &kp CAPS &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN U_WH_D U_MS_L U_MS_D U_MS_R &none &none
+            &none &kp TAB  &kp HOME &kp UP   &kp END   &kp PG_UP &trans &trans &trans &trans &none &none
+            &none &kp CAPS &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN &trans &trans &trans &trans &none &none
             &kp ENTER &trans &trans &trans &lt 2 DEL &kp ENTER
             >;
         };
-        raise_layer {
+        symbols_layer {
             bindings = <
             &none &kp EXCLAMATION &kp AT_SIGN &kp HASH &kp DOLLAR &kp PERCENT &kp CARET &kp AMPERSAND &kp ASTERISK &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &none
             &none &none &none &kp GRAVE &kp DOUBLE_QUOTES &kp MINUS &kp EQUAL &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp BACKSLASH &none
@@ -60,10 +57,18 @@
             &kp ENTER &trans &trans &trans &trans &kp ENTER
             >;
         };
+        mouse_layer {
+            bindings = <
+            &none &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &kp NUMBER_0 &none
+            &none &trans &trans &trans &trans &&tog 3 U_WH_U U_BTN1 U_MS_U U_BTN2 &none &none
+            &none &trans &trans &trans &trans &trans  U_WH_D U_MS_L U_MS_D U_MS_R &none &none
+            &kp ENTER &trans &trans U_BTN1 U_BTN2 &kp ENTER
+            >;
+        };
         bt_layer {
             bindings = <
                 &none &bt BT_PRV &bt BT_NXT &none &none &bt BT_CLR &none &none &none &none &none
-                &none &kp C_VOL_UP &kp C_BRI_UP &none &none &none &none &none &none &none &none &none
+                &none &kp C_VOL_UP &kp C_BRI_UP &none &tog 3 &none &none &none &none &none &none &none
                 &none &kp C_VOL_DN &kp C_BRI_DN &none &none &none &none &none &none &none &none &none
                 &none &none &none &none &none &none 
             >;
